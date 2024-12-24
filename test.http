@@ -1,0 +1,49 @@
+###
+// GET all heroes
+GET http://localhost:3000/api/getall
+
+###
+// Add 3 heroes using POST
+POST http://localhost:3000/api/post
+Content-Type: application/json
+
+[
+    {
+        "hero_id": 1,
+        "hero_name": "Superman",
+        "is_xman": "N",
+        "was_snapped": "N"
+    },
+    {
+        "hero_id": 2,
+        "hero_name": "Batman",
+        "is_xman": "N",
+        "was_snapped": "N"
+    },
+    {
+        "hero_id": 3,
+        "hero_name": "Spiderman",
+        "is_xman": "Y",
+        "was_snapped": "N"
+    }
+]
+
+
+###
+// Edit hero by id using PUT
+PUT http://localhost:3000/api/put/1
+Content-Type: application/json
+
+{
+    "hero_name": "UpdatedHero",
+    "is_xman": "Maybe",
+    "was_snapped": "Maybe"
+}
+
+###
+// Delete hero by using id
+DELETE  http://localhost:3000/api/put/3
+
+###
+// Delete the whole table for testing
+DELETE  http://localhost:3000/api/deletetable
